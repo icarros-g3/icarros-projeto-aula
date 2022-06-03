@@ -58,14 +58,14 @@ export const FormGroup = styled.div`
   }
 
   input {
-    border: 1px solid white;
+    border: 2px solid white;
     outline: none;
     appearance: none;
     box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
-  }
 
-  input:focus-within {
-    border: 1px solid #0981e7;
+    :focus-within {
+      border: 2px solid #0981e7;
+    }
   }
 
   button {

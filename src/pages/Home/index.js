@@ -20,9 +20,9 @@ const Home = () => {
           type: 'success',
           onClose: () => {
             setData((prevState) => {
-              Array.from(document.querySelectorAll('input')).forEach((input) => (input.value = ''));
               return { ...prevState, nome: '', email: '', senha: '' };
             });
+            Array.from(document.querySelectorAll('input')).forEach((input) => (input.value = ''));
           },
         });
       })
@@ -43,18 +43,18 @@ const Home = () => {
           <h1>CADASTRO DE USUÁRIO</h1>
           <StyledForm onSubmit={cadastroSubmit}>
             <FormGroup>
-              <label htmlFor="">Nome</label>
-              <input type="text" onChange={(e) => setData({ ...data, nome: e.target.value })} />
+              <label htmlFor="nome">Nome</label>
+              <input type="text" id="nome" name="nome" required spellCheck={false} onChange={(e) => setData({ ...data, nome: e.target.value })} />
             </FormGroup>
 
             <FormGroup>
-              <label htmlFor="">E-mail</label>
-              <input type="text" onChange={(e) => setData({ ...data, email: e.target.value })} />
+              <label htmlFor="email">E-mail</label>
+              <input type="email" id="email" name="email" required spellCheck={false} onChange={(e) => setData({ ...data, email: e.target.value })} />
             </FormGroup>
 
             <FormGroup>
-              <label htmlFor="">Senha</label>
-              <input type="password" onChange={(e) => setData({ ...data, senha: e.target.value })} />
+              <label htmlFor="senha">Senha</label>
+              <input type="password" id="senha" name="senha" required spellCheck={false} onChange={(e) => setData({ ...data, senha: e.target.value })} />
             </FormGroup>
 
             <FormGroup>
